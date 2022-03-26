@@ -1,6 +1,33 @@
-# Index
+# Table of Contents
+1. [Install Requirements](#requirements)
+2. [Project layout](#project-layout)
+3. [Scripts layout](#scripts)
+4. [Labeling your dataset](#labeling)
+    1. [Installing LabelImg](#installation)
+6. [Dataset Folder](#dataset-folder)
+    1. [Data Augmentation](#data-augmentation)
+    2. [Filtering](#filtering)
+    3. [Output folder for training (formatting)](#output-folder-for-training)
+7. [Training](#training)
+    1. [Locally](#locally)
+    2. [Using Google Colab](#using-google-colab)
+    3. [Debugging](#debugging)
+    4. [Output data (weights, ...)](#output-data)
+    5. [Displaying Training Metrics](#displaying-training-metrics)
+8. [Inference](#inference)
+    1. [Making an inference](#command)
+    2. [Debugging](#debugging)
+9. [Evaluate mAP](#evaluate)
+    1. [Evaluate your model according to your labeling](#command)
+    2. [Debugging](#debugging)
 
-## Project layout
+
+
+# Requirements
+
+- `pip install modules/requirements.txt` - Install requirements
+
+# Project layout
 
     Dataset/
         Dataset/ # Folder in which you place images and labels associated you want to make inference on
@@ -14,11 +41,7 @@
     Training/
         yolov5/ # Library for handling yolov5 computation
 
-## Requirements
-
-- `pip install modules/requirements.txt` - Install requirements
-
-## Notebooks
+# Scripts
 
     Dataset/
     - `Bbox_augmentation.ipynb` - Get 3 transformations + all inverse images in separate subfolders
@@ -51,7 +74,7 @@ by <a href="http://www.image-net.org/" >ImageNET</a>. Besides, it also supports 
 
 <a href="https://youtu.be/p0nR2YsCY_U">Watch a demo video </a>
 
-## Installation
+## [Installation](https://github.com/tzutalin/labelImg)
 
 Follow the steps on the <a href="https://github.com/tzutalin/labelImg">LabelImg</a> github page.
 Be sure to use "YOLO" labeling format
@@ -342,7 +365,7 @@ By renaming the experiments you will have a nicer view on tensorboard as you can
 _If you are using a notebook the interface should be displayed in the output of the cell.<br>
 If it is not, check **localhost:8000** in your favorite browser._
 
-# Inference.py
+# Inference
 
 ---
 
@@ -382,7 +405,7 @@ Voici un extrait :
 3 Testset/capture13.jpeg<br>
 4 Testset/capture14.jpeg<br>
 
-```bash
+```powershell
                   ____                           __  _                __  ___          __     __
                  /  _/___ ___  ____  ____  _____/ /_(_)___  ____ _   /  |/  /___  ____/ /__  / /
                  / // __ `__ \/ __ \/ __ \/ ___/ __/ / __ \/ __ `/  / /|_/ / __ \/ __  / _ \/ /
@@ -395,7 +418,7 @@ Fusing layers...<br>
 Model Summary: 213 layers, 7012822 parameters, 0 gradients, 15.8 GFLOPs<br>
 Loading Model took : 0.2018270492553711<br>
 
-```bash
+```powershell
      ______                            __  _                                    ___      __  _
     / ____/___  ____ ___  ____  __  __/ /_(_)___  ____ _   ____  ________  ____/ (_)____/ /_(_)___  ____  _____
    / /   / __ \/ __ `__ \/ __ \/ / / / __/ / __ \/ __ `/  / __ \/ ___/ _ \/ __  / / ___/ __/ / __ \/ __ \/ ___/
@@ -414,7 +437,7 @@ Loading Model took : 0.2018270492553711<br>
 
 ### Le temps moyen d'inference est : 0.49 s
 
-```bash
+```powershell
                       _____             _                _
                      / ___/____ __   __(_)___  ____ _   (_)___ ___  ____ _____ ____  _____
                      \__ \/ __ `/ | / / / __ \/ __ `/  / / __ `__ \/ __ `/ __ `/ _ \/ ___/
@@ -425,7 +448,7 @@ Loading Model took : 0.2018270492553711<br>
 
 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:02<00:00, 8.65it/s]
 
-# Evaluate.py
+# Evaluate
 
 ---
 
