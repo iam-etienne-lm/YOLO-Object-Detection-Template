@@ -7,8 +7,6 @@ sys.path.insert(1, p)
 import modules.filters as filters
 
 import pyfiglet
-ascii_banner = pyfiglet.figlet_format("Detection de rayures", font='slant', justify='center', width=110)
-print(ascii_banner)
 
 import argparse, glob, time
 import pandas as pd
