@@ -86,7 +86,7 @@ Be sure to use "YOLO" labeling format
 Get started with a folder of images which you labeled using <a href=/labeling>LabelImg</a> :
 
     TRAIN_DATASET/ # Folder in which you place all images and labels associated you watn to make inference on.
-        classes.txt # Text file with only "Scratch" in it
+        classes.txt # Text file with only the class(es) name(s) in it
 
         capture0.jpeg  # Image 0
         capture0.txt  # Label 0 associated to image 0 (format : "0 | x | y | w | h")
@@ -149,7 +149,7 @@ on the training images so the model has the same root for the training as for th
 First, gather all the images and labels that you augmented _(if you want them)_ in 1 folder :
 
     TRAIN_DATASET/ # Folder in which you place all images and labels associated you watn to make inference on.
-        classes.txt # Text file with only "Scratch" in it
+        classes.txt # Text file with only the class(es) name(s) in it
 
         capture0.jpeg  # Original
         capture0.txt  # Original
@@ -175,10 +175,10 @@ Then you can open the file **Filter_images.ipynb** :<br>
 
 ## Output folder for training
 
-Assume that you choose **TRAIN_DATASET** as origin and V5 as **filter_version**.<br>
+Assume that you choose **TRAIN_DATASET** as origin and V1 as **filter_version**.<br>
 You will end up with a new folder like this :
 
-    TRAIN_DATASET_V5/
+    TRAIN_DATASET_V1/
         Trainset/
         Testset/
         Valset/
@@ -187,10 +187,10 @@ You will end up with a new folder like this :
 Here is what the config.yml must contain :
 
 ```yml
-train: ../TRAIN_DATASET_V5/Trainset # Path to Trainset
-val: ../TRAIN_DATASET_V5/Valset # Path to Valset
+train: ../TRAIN_DATASET_V1/Trainset # Path to Trainset
+val: ../TRAIN_DATASET_V1/Valset # Path to Valset
 nc: 1 # Only 1 class
-names: ["Scratch"] # Name of the class
+names: ["class-name"] # Name(s) of the class(es)
 ```
 
 #### Now your data is officially shaped to be given to a Yolo model.
@@ -223,7 +223,7 @@ Note that the Testset isn't taken in consideration by Yolo. This batch of the da
 
 ```bash
 python yolov5/train.py
-    --data TRAIN_DATASET_V5/config.yaml # Path to the "config.yml" of your Train/Val set
+    --data TRAIN_DATASET_V1/config.yaml # Path to the "config.yml" of your Train/Val set
     --weights yolov5/models/yolov5s.pt # Default yolov5s
             # Just replace the "s" with the model you want to use
             # Note : you can also use custom weights in this path (ex pre-trained models)
@@ -244,7 +244,7 @@ You can then modify the _training line_ as explained in [the previous paragraph]
 Here is what the output should look like if the training launched successfully :
 
 ```python
-Train: weights=yolov5/models/yolov5s.pt, cfg=, data=TRAIN_DATASET_V5/config.yaml,
+Train: weights=yolov5/models/yolov5s.pt, cfg=, data=TRAIN_DATASET_V1/config.yaml,
 hyp=yolov5/data/hyps/hyp.scratch.yaml, epochs=300, batch_size=32, imgsz=640, rect=False,
 resume=False, nosave=False, noval=False, noautoanchor=False, evolve=None, bucket=, cache=None,
 image_weights=False, device=, multi_scale=False, single_cls=False, optimizer=SGD, sync_bn=False,
@@ -469,7 +469,7 @@ No backup required for /Users/dorianvoydie/Documents/team2_pytorch/mAP/input/det
 total intersected files: 20
 Intersection completed!
 
-91.17% = Scratch AP
+91.17% = class AP
 
 mAP = 91.17%
 ```
