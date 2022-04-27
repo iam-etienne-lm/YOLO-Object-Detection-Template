@@ -70,7 +70,7 @@ if len(images_path)>0:
         filtered_img_path = origin+"/Filtered/"+img_path.split("/")[-1]
         cv2.imwrite(filtered_img_path,img)
         # Making inference
-        inference(source=filtered_img_path,conf_thres=conf_thres,model=model);
+        inference(source=img_path,conf_thres=conf_thres,model=model);
         times.append(time.time()-start)
     print("\n Le temps moyen d'inference est :",round(sum(times)/len(times),2),"s")
     os.system("mv Prediction "+origin)
