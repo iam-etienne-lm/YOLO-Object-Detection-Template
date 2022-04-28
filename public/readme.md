@@ -25,3 +25,10 @@ sudo nano /etc/php/7.4/apache2/php.ini
     file_uploads = On
     post_max_size = 800M
     upload_max_filesize = 800M
+
+Installer NodeJS
+
+```bash
+sudo apt install nodejs
+sudo apt install npm
+```

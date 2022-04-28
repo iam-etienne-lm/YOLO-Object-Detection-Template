@@ -211,7 +211,6 @@ img {
   /* justify-content: center; */
   align-items: center;
   flex-flow: column;
-  height: calc(100% - (46px + 20px));
 }
 .content a {
   font-size: 24px;
@@ -365,4 +364,10 @@ li a:hover:not(.active) {
 .button:hover::before,
 .button:focus::before {
   opacity: 1;
+}
+
+#drop_zone {
+  border: 5px solid blue;
+  width: 200px;
+  height: 100px;
 }
