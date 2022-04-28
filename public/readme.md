@@ -9,13 +9,6 @@ apt-get install apache2 php libapache2-mod-php
 systemctl restart apache2
 ```
 
-Placez le contenu de ce dossier dans /var/www/html
-Puis donnez les autorisations root à ce dossier :
-
-```bash
-sudo chmod 777 -R /var/www/html
-```
-
 Modifier la configuration de PHP pour accepter l'upload de fichiers plus lours (> 8Mo)
 
 ```bash
@@ -34,4 +27,11 @@ source venv/bin/activate
 which python3 # Cela doit pointer vers le dossier venv/bin
 which pip # Cela doit pointer vers le dossier venv/bin
 pip install -r Inference/yolov5/requirements.txt
+```
+
+Enfin, placez le contenu de ce dossier dans /var/www/html
+Puis donnez les autorisations root à ce dossier :
+
+```bash
+sudo chmod 777 -R /var/www/html
 ```
