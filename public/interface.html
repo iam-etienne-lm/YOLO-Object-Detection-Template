@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AWS Project | Big Data</title>
+    <link rel="icon" href="img/logo.png" type="image/png" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="ressources/css/interface.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://kit.fontawesome.com/0c87a70838.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <ul>
+        <li>
+          <a class="active" href="index.html"
+            ><i class="fa fa-fw fa-home"></i> Home</a
+          >
+        </li>
+        <li>
+          <a href="interface.html"
+            ><i class="fas fa-share-alt"></i> Interface</a
+          >
+        </li>
+        <li>
+          <a href="index_onnx.html"><i class="fas fa-share-alt"></i> ONNX</a>
+        </li>
+        <li>
+          <a href="doc.html"><i class="fas fa-book"></i> Documentation</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <div class="form-cols form-cols-bis">
+        <div class="separation">
+          <div class="middle-text">Upload .pt file</div>
+          <form
+            enctype="multipart/form-data"
+            action="upload_pt.php"
+            method="POST"
+          >
+            <input class="choose" name="userfile" type="file" />
+            <div class="wrap">
+              <button class="button" type="submit">Upload</button>
+            </div>
+          </form>
+        </div>
+        <div class="loader" id="loader">
+          <img
+            width="50%"
+            height="50%"
+            src="ressources/Circle-Loading.svg"
+            alt="loading"
+          />
+        </div>
+        <div class="separation">
+          <div class="middle-text">Upload .pt file</div>
+          <form
+            enctype="multipart/form-data"
+            action="upload_pt.php"
+            method="POST"
+          >
+            <input class="choose" name="userfile" type="file" />
+            <div class="wrap">
+              <button class="button" type="submit">Upload</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- <div class="form-cols">
+        <form method="POST" action="interface.html">
+          <button type="submit" class="btn btn-1 btn-sep icon-start">
+            Start
+          </button>
+        </form>
+
+        <form method="POST" action="interface.html">
+          <button type="submit" class="btn btn-2 btn-sep icon-send">Run</button>
+        </form>
+        <form method="POST" action="interface.html">
+          <button type="submit" class="btn btn-3 btn-sep icon-stop">
+            Stop
+          </button>
+        </form>
+      </div>
+
+      <form method="GET" action="interface.html">
+        <button type="submit" class="btn btn-4 btn-sep icon-dwnl">
+          Download results
+        </button>
+      </form>
+    </div> -->
+
+    <div class="footer">By Dorian VOYDIE</div>
+  </body>
+</html>
