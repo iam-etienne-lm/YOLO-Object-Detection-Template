@@ -26,9 +26,12 @@ sudo nano /etc/php/7.4/apache2/php.ini
     post_max_size = 800M
     upload_max_filesize = 800M
 
-Installer NodeJS
+Créer un environnement virtuel python
 
 ```bash
-sudo apt install nodejs
-sudo apt install npm
+python3 -m venv ./venv # Créer un environnement virtuel dans le dossier "public"
+source venv/bin/activate
+which python3 # Cela doit pointer vers le dossier venv/bin
+which pip # Cela doit pointer vers le dossier venv/bin
+pip install -r Inference/yolov5/requirements.txt
 ```
