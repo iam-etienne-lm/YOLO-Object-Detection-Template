@@ -1,5 +1,5 @@
 <?php
-// header("Location: interface.php");
+header("Location: interface.php");
 if (isset($_POST['sub'])) {
     if (count($_FILES['upload']['name']) > 0) {
      for ($i=0; $i<count($_FILES['upload']['name']); $i++) {

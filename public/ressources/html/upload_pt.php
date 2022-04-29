@@ -1,5 +1,5 @@
 <?php
-// header("Location: interface.php");
+header("Location: interface.php");
 $uploadfile = '/var/www/html/public/uploads/weights.pt';
 
 echo "<p>";

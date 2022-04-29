@@ -9,7 +9,7 @@ body {
   height: 100%;
   margin: auto;
   text-align: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .image-cropper {
@@ -30,7 +30,7 @@ img {
 .form-cols {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
 }
 

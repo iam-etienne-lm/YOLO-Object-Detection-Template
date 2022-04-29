@@ -45,7 +45,21 @@
     </div>
 
     <div class="content">
-      <p>Ajouter ici la documentation</p>
+      <h1 id="debug">Debuggage</h1>
+
+      <p>Une fois les requirements installés, pour débugger, utilisez votre terminal :</p>
+      <pre>
+        <code class="lang-bash">
+        source ./venv/bin/activate
+        which python3
+        which pip
+        # pip install -r yolov5/requirements.txt # Normalement déjà installés (pytorch / opencv / ...)
+        python3 ./Inference/Inference.py --origin ./Inference/Testset --weights ./uploads/weights.pt --conf_thres 0.4 # Testez l'inférence
+        sudo chmod -R 777 /var/www/html # Donner les droits admin au nouveaux fichiers
+        </code>
+      </pre>
+
+      
     </div>
 
     <div class="footer">By Dorian VOYDIE, Jason DAURAT, Yoann MAAREK</div>

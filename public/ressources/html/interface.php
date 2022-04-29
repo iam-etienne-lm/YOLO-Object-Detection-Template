@@ -55,14 +55,6 @@
             </div>
           </form>
         </div>
-        <div class="loader" id="loader">
-          <img
-            width="50%"
-            height="50%"
-            src="/public/ressources/Circle-Loading.svg"
-            alt="loading"
-          />
-        </div>
         <div class="separation">
           <div class="middle-text">Upload images (multiple)</div>
           <form
@@ -84,19 +76,39 @@
           </form>
         </div>
       </div>
+        
 
-      <form method="GET" action="/public/Inference/inference.php">
-        <button type="submit" class="btn btn-4 btn-sep icon-dwnl">
-          Compute Inferences
-        </button>
-      </form>
+      <div class="form-cols">
+        <form method="GET" action="/public/Inference/inference.php">
+          <div style="white-space: pre;">
+            <label
+              for="conf_threshold"
+              style="
+                color: white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+                  'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                margin: 15px;
+              "
+              >Choose a confidence threshold</label>
+            <input id="conf_thres" name="conf_thres" type="number" step="0.05" max="1" min="0" value="0.4"/>
+          </div>
+            <button type="submit" class="btn btn-1 btn-sep icon-dwnl">
+              Compute Inferences
+            </button>
+        </form>
+        <form method="GET" action="/public/ressources/html/clear_cache.php">
+          <button type="submit" class="btn btn-2 btn-sep icon-dwnl">
+            Clear Cache
+          </button>
+        </form>
+      </div>
     </div>
 
     <div><?php
     echo "<h2 style='color:white'> Inferences </h2>";
 
     foreach (glob("../../Inference/Testset/Images_predites/*.jpeg") as $filename)  {
-        echo "<p style='color:white'>$filename</p>";
+        echo "</br>";
         echo "<img src='$filename' alt='$filename' style='width:800px ; height:auto'/>";
     }
     ?></div>
