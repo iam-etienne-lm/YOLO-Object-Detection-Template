@@ -14578,7 +14578,7 @@ body {
   </head>
 
   <body>
-  <a target="_blank" href="https://colab.research.google.com/github/Dodalpaga/YOLO-Object-Detection-Template/blob/main/Inference/Training.ipynb">
+  <a target="_blank" href="https://colab.research.google.com/github/Dodalpaga/YOLO-Object-Detection-Template/blob/main/YOLO/Training.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
   </a>
     <div class="content">

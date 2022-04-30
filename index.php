@@ -8,7 +8,7 @@
     <link
       type="text/css"
       rel="stylesheet"
-      href="/public/ressources/css/index.css"
+      href="/ressources/css/index.css"
     />
     <link
       rel="stylesheet"
@@ -21,27 +21,27 @@
     <div class="navbar">
       <ul>
         <li>
-          <a class="active" href="/public/index.php"
+          <a class="active" href="index.php"
             ><i class="fa fa-fw fa-home"></i> Home</a
           >
         </li>
         <li>
-          <a href="/public/ressources/html/training.php"
+          <a href="/ressources/html/training.php"
             ><i class="fas fa-share-alt"></i> Training</a
           >
         </li>
         <li>
-          <a href="/public/ressources/html/interface.php"
+          <a href="/ressources/html/interface.php"
             ><i class="fas fa-share-alt"></i> Inference</a
           >
         </li>
         <li>
-          <a href="/public/ressources/onnx/index_onnx.php"
+          <a href="/ressources/onnx/index_onnx.php"
             ><i class="fas fa-share-alt"></i> ONNX</a
           >
         </li>
         <li>
-          <a href="/public/ressources/html/doc.php"
+          <a href="/ressources/html/doc.php"
             ><i class="fas fa-book"></i> Documentation</a
           >
         </li>
@@ -82,7 +82,7 @@
           source venv/bin/activate 
           which python3 # Cela doit pointer vers le dossier venv/bin 
           which pip # Cela doit pointer vers le dossier venv/bin 
-          pip install -r Inference/yolov5/requirements.txt ```
+          pip install -r YOLO/yolov5/requirements.txt ```
         </code>
       </pre>
 
@@ -97,6 +97,6 @@
       </pre>
     </div>
 
-    <div class="footer">By Dorian VOYDIE, Jason DAURAT, Yoann MAAREK</div>
+    <div class="footer">By Dorian VOYDIE</div>
   </body>
 </html>

@@ -1,12 +1,12 @@
 <?php
-header("Location: interface.php");
+header("Location: ../html/interface.php");
 if (isset($_POST['sub'])) {
     if (count($_FILES['upload']['name']) > 0) {
      for ($i=0; $i<count($_FILES['upload']['name']); $i++) {
       $tmpFilePath = $_FILES['upload']['tmp_name'][$i];
       if ($tmpFilePath != "") {
         $shortname = $_FILES['upload']['name'][$i];
-        $filePath = "/var/www/html/public/Inference/Testset/".$_FILES['upload']['name'][$i];
+        $filePath = "/var/www/html/YOLO/Testset/".$_FILES['upload']['name'][$i];
         if (move_uploaded_file($tmpFilePath, $filePath)) {
           $files[] = $shortname;                    
         }

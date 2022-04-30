@@ -8,7 +8,7 @@
     <link
       type="text/css"
       rel="stylesheet"
-      href="/public/ressources/css/interface.css"
+      href="/ressources/css/interface.css"
     />
     
     <script src="https://kit.fontawesome.com/0c87a70838.js"></script>
@@ -18,27 +18,27 @@
     <div class="navbar">
       <ul>
         <li>
-          <a class="active" href="/public/index.php"
+          <a class="active" href="/index.php"
             ><i class="fa fa-fw fa-home"></i> Home</a
           >
         </li>
         <li>
-          <a href="/public/ressources/html/training.php"
+          <a href="/ressources/html/training.php"
             ><i class="fas fa-share-alt"></i> Training</a
           >
         </li>
         <li>
-          <a href="/public/ressources/html/interface.php"
+          <a href="/ressources/html/interface.php"
             ><i class="fas fa-share-alt"></i> Inference</a
           >
         </li>
         <li>
-          <a href="/public/ressources/onnx/index_onnx.php"
+          <a href="/ressources/onnx/index_onnx.php"
             ><i class="fas fa-share-alt"></i> ONNX</a
           >
         </li>
         <li>
-          <a href="/public/ressources/html/doc.php"
+          <a href="/ressources/html/doc.php"
             ><i class="fas fa-book"></i> Documentation</a
           >
         </li>
@@ -84,7 +84,7 @@
         
 
       <div class="form-cols">
-        <form method="GET" action="/public/ressources/scripts/inference.php">
+        <form method="GET" action="/ressources/scripts/inference.php">
           <div style="white-space: pre;">
             <label
               for="conf_threshold"
@@ -101,7 +101,7 @@
               Compute Inferences
             </button>
         </form>
-        <form method="GET" action="/public/ressources/scripts/clear_cache.php">
+        <form method="GET" action="/ressources/scripts/clear_cache.php">
           <button type="submit" class="btn btn-2 btn-sep icon-dwnl">
             Clear Cache
           </button>
@@ -112,7 +112,7 @@
     <div>
       <?php
     echo "<h2 style='color:white'> Inferences </h2>";
-    foreach (glob("../../Inference/Testset/Images_predites/*.jpeg") as $filename)  {
+    foreach (glob("../../YOLO/Testset/Images_predites/*.jpeg") as $filename)  {
         echo "</br>";
         echo "<img src='$filename' alt='$filename' style='width:800px ; height:auto'/>";
     }

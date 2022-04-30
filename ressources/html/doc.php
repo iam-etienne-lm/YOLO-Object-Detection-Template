@@ -8,13 +8,13 @@
     <link
       type="text/css"
       rel="stylesheet"
-      href="/public/ressources/css/doc.css"
+      href="/ressources/css/doc.css"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script src="/public/ressources/js/script.js"></script>
+    <script src="/ressources/js/script.js"></script>
     <script src="https://kit.fontawesome.com/0c87a70838.js"></script>
   </head>
 
@@ -22,27 +22,27 @@
     <div class="navbar">
       <ul>
         <li>
-          <a class="active" href="/public/index.php"
+          <a class="active" href="/index.php"
             ><i class="fa fa-fw fa-home"></i>Home</a
           >
         </li>
         <li>
-          <a href="/public/ressources/html/training.php">
+          <a href="/ressources/html/training.php">
             <i class="fas fa-share-alt"></i>Training</a
           >
         </li>
         <li>
-          <a href="/public/ressources/html/interface.php"
+          <a href="/ressources/html/interface.php"
             ><i class="fas fa-share-alt"></i> Inference</a
           >
         </li>
         <li>
-          <a href="/public/ressources/onnx/index_onnx.php"
+          <a href="/ressources/onnx/index_onnx.php"
             ><i class="fas fa-share-alt"></i> ONNX</a
           >
         </li>
         <li>
-          <a href="/public/ressources/html/doc.php"
+          <a href="/ressources/html/doc.php"
             ><i class="fas fa-book"></i> Documentation</a
           >
         </li>
@@ -62,7 +62,7 @@
         which python3
         which pip
         # pip install -r yolov5/requirements.txt # Normalement déjà installés (pytorch / opencv / ...)
-        python3 ./Inference/Inference.py --origin ./Inference/Testset --weights ./uploads/weights.pt --conf_thres 0.4 # Testez l'inférence
+        python3 ./YOLO/YOLO.py --origin ./YOLO/Testset --weights ./uploads/weights.pt --conf_thres 0.4 # Testez l'inférence
         sudo chmod -R 777 /var/www/html # Donner les droits admin au nouveaux fichiers
         </code>
       </pre>

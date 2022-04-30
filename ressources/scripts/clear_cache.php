@@ -1,6 +1,6 @@
 <?php
-header("Location: interface.php");
-// $files = glob('../../Inference/Testset/*'); // get all file names
+header("Location: ../html/interface.php");
+// $files = glob('../../YOLO/Testset/*'); // get all file names
 // foreach($files as $file){ // iterate files
 //     echo $file . "<br />"; // display file name
 //     if(is_file($file)) {
@@ -8,7 +8,7 @@ header("Location: interface.php");
 //         unlink($file); // delete file
 //     }
 // }
-$folders = glob('../../Inference/Testset/*'); // get all files names
+$folders = glob('../../YOLO/Testset/*'); // get all files names
 foreach($folders as $folder){ // iterate files
     if (is_dir($folder)) {
         $objects = scandir($folder);

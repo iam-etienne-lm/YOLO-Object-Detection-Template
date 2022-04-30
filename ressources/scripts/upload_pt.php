@@ -1,6 +1,6 @@
 <?php
-header("Location: interface.php");
-$uploadfile = '/var/www/html/public/uploads/weights.pt';
+header("Location: ../html/interface.php");
+$uploadfile = '/var/www/html/uploads/weights.pt';
 
 echo "<p>";
 echo "Moving : ";
