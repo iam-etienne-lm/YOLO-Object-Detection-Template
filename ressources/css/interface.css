@@ -188,20 +188,16 @@ img {
   width: 60px;
 }
 
-.icon-send:before {
-  content: "\f1d8";
+.icon-network:before {
+  content: "\f542";
 }
 
-.icon-start:before {
-  content: "\f04b";
+.icon-metrics:before {
+  content: "\f682";
 }
 
-.icon-stop:before {
-  content: "\f04d";
-}
-
-.icon-dwnl:before {
-  content: "\f019";
+.icon-clear:before {
+  content: "\f51a";
 }
 
 /* Content */

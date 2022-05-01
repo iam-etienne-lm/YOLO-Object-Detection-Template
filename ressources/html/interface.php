@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AWS Project | Big Data</title>
-    <link rel="icon" href="img/logo.png" type="image/png" />
+    <link rel="icon" href="../logo.png" type="image/png" />
     <link
       type="text/css"
       rel="stylesheet"
@@ -73,7 +73,7 @@
               name="upload[]"
               type="file"
               multiple="multiple"
-              accept="image/*.jpeg, image/*.jpg, image/*.png"
+              accept="image/*.jpeg , image/*.jpg"
             />
             <div class="wrap">
               <button class="button" name="sub" type="submit">Upload</button>
@@ -97,12 +97,17 @@
               >Choose a confidence threshold</label>
             <input id="conf_thres" name="conf_thres" type="number" step="0.05" max="1" min="0" value="0.4"/>
           </div>
-            <button type="submit" class="btn btn-1 btn-sep icon-dwnl">
-              Compute Inferences
+            <button type="submit" class="btn btn-1 btn-sep icon-network">
+              Inference
             </button>
         </form>
+        <form method="GET" action="/ressources/scripts/metrics.php" target="_blank">
+          <button type="submit" class="btn btn-2 btn-sep icon-metrics">
+            Show Metrics
+          </button>
+        </form>
         <form method="GET" action="/ressources/scripts/clear_cache.php">
-          <button type="submit" class="btn btn-2 btn-sep icon-dwnl">
+          <button type="submit" class="btn btn-3 btn-sep icon-clear">
             Clear Cache
           </button>
         </form>
@@ -112,7 +117,7 @@
     <div>
       <?php
     echo "<h2 style='color:white'> Inferences </h2>";
-    foreach (glob("../../YOLO/Testset/Images_predites/*.jpeg") as $filename)  {
+    foreach (glob("../../uploads/Testset/Images_predites/*.jpeg") as $filename)  {
         echo "</br>";
         echo "<img src='$filename' alt='$filename' style='width:800px ; height:auto'/>";
     }

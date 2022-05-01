@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AWS Project | Big Data</title>
-    <link rel="icon" href="img/logo.png" type="image/png" />
+    <link rel="icon" href="../logo.png" type="image/png" />
     <link
       type="text/css"
       rel="stylesheet"
