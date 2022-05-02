@@ -100,7 +100,7 @@
           </form>
         </div>
       </div>
-        
+
 
       <div class="form-cols">
         <form method="GET" action="/ressources/scripts/inference.php">
@@ -125,6 +125,11 @@
             Show Metrics
           </button>
         </form>
+        <form method="GET" action="/ressources/scripts/webcam.php" target="_blank">
+          <button type="submit" class="btn btn-4 btn-sep icon-metrics">
+            Webcam
+          </button>
+        </form>
         <form method="GET" action="/ressources/scripts/clear_cache.php">
           <button type="submit" class="btn btn-3 btn-sep icon-clear">
             Clear Cache
@@ -140,9 +145,7 @@
     }
     ?></div>
     </div>
-
-    
-
+    <img src="" width="100%">
     <div class="footer">By Dorian VOYDIE</div>
   </body>
 </html>
