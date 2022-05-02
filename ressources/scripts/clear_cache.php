@@ -1,16 +1,6 @@
 <?php
 header("Location: ../html/interface.php");
 
-// Clear only all files in "Testset" folder
-$files = glob('../../uploads/Testset/*'); // get all file names
-foreach($files as $file){ // iterate files
-    echo $file . "<br />"; // display file name
-    if(is_file($file)) {
-        echo $file . "<br />"; // display file name
-        unlink($file); // delete file
-    }
-}
-
 // Clear only all folders in "Testset" folder
 $folders = glob('../../uploads/Testset/*'); // get all files names
 foreach($folders as $folder){ // iterate files
@@ -27,4 +17,14 @@ foreach($folders as $folder){ // iterate files
     rmdir($folder);
   }
 }
+
+// Clear only all files in "Testset" folder
+$files = glob('../../uploads/Testset/*'); // get all file names
+foreach($files as $file){ // iterate files
+    if(is_file($file)) {
+        echo $file . "<br />"; // display file name
+        unlink($file); // delete file
+    }
+}
+
 ?>

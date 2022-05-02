@@ -95,7 +95,7 @@
                 margin: 15px;
               "
               >Choose a confidence threshold</label>
-            <input id="conf_thres" name="conf_thres" type="number" step="0.05" max="1" min="0" value="0.4"/>
+            <input id="conf_threshold" name="conf_threshold" type="number" step="0.05" max="1" min="0" value="0.4"/>
           </div>
             <button type="submit" class="btn btn-1 btn-sep icon-network">
               Inference

@@ -111,6 +111,5 @@ if len(images_path)>0:
     
     
     os.system("mv ./Images_predites ./"+origin)
-    os.system("sudo chmod 777 -R Testset")
 else:
     print("No jpeg images in directory")

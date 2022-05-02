@@ -1,5 +1,5 @@
 <?php
-// header("Location: ../html/interface.php");
+header("Location: ../html/interface.php");
 if (isset($_POST['sub'])) {
     if (count($_FILES['upload']['name']) > 0) {
      for ($i=0; $i<count($_FILES['upload']['name']); $i++) {
@@ -22,9 +22,7 @@ if (isset($_POST['sub'])) {
     }
     echo "</ul>";
   }
-  $output = shell_exec("cd ../../YOLO/modules &&  python3 ../../YOLO/modules/convert_jpg_to_jpeg.py --origin ../../uploads/Testset ");
+  $output = shell_exec("cd ../../YOLO/modules &&  python3 ../../YOLO/modules/convert_jpg_to_jpeg.py --origin ../../uploads/Testset && sudo chmod 777 -R /var/www/html");
   echo $output;
 }
-
-
 ?>
