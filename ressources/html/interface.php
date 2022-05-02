@@ -46,7 +46,7 @@
     </div>
 
     <div class="content">
-      <div class="form-cols form-cols-bis">
+      <div class="form-cols form-cols-bis" style="align-items: center;">
         <div class="separation">
           <div class="middle-text">Upload .pt file</div>
           <form
@@ -77,6 +77,25 @@
             />
             <div class="wrap">
               <button class="button" name="sub" type="submit">Upload</button>
+            </div>
+          </form>
+          </br>
+          <div class="middle-text">Upload labels (multiple)</div>
+          <form
+            action="../scripts/upload_labels.php"
+            enctype="multipart/form-data"
+            method="post"
+          >
+            <input
+              class="choose"
+              id="upload_labels"
+              name="upload_labels[]"
+              type="file"
+              multiple="multiple"
+              accept="*.txt"
+            />
+            <div class="wrap">
+              <button class="button" name="sub_label" type="submit">Upload</button>
             </div>
           </form>
         </div>
@@ -112,9 +131,7 @@
           </button>
         </form>
       </div>
-    </div>
-
-    <div>
+      <div>
       <?php
     echo "<h2 style='color:white'> Inferences </h2>";
     foreach (glob("../../uploads/Testset/Images_predites/*.jpeg") as $filename)  {
@@ -122,6 +139,9 @@
         echo "<img src='$filename' alt='$filename' style='width:800px ; height:auto'/>";
     }
     ?></div>
+    </div>
+
+    
 
     <div class="footer">By Dorian VOYDIE</div>
   </body>
