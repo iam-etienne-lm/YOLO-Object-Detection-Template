@@ -2,7 +2,7 @@ from flask import Flask, Response, render_template
 import logging, logging.config, conf
 logging.config.dictConfig(conf.dictConfig)
 logger = logging.getLogger(__name__)
-import cv2
+import cv2,os
 
 import torch
 import numpy as np
@@ -45,7 +45,7 @@ class Detection:
         if model_name:
             model = torch.hub.load('ultralytics/yolov5', 'custom', path=model_name, force_reload=True)
         else:
-            model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)
+            model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True, force_reload=True)
         return model
 
     def score_frame(self, frame):
@@ -129,8 +129,8 @@ def index():
     return "Default Message"
 
 def gen(video):
-    
-    detector = Detection(capture_index=0, model_name='../../uploads/weights.pt')
+    # Par défaut, le script python nous situe au chemin /var/www/html
+    detector = Detection(capture_index=0, model_name='./uploads/weights.pt')
     while True:
         success, image = video.read()
         assert success

@@ -60,7 +60,7 @@
       <p>Pour arrêter la webcam, ouvrez votre terminal, dans le dossier du projet tapez :</p>
       <pre>
         <code class="lang-bash">
-          /venv/bin/python3 /flask-video-stream-master/Kill_process.py
+          sudo /venv/bin/python3 /flask-video-stream-master/Kill_process.py
         </code>
       </pre>
 

@@ -126,6 +126,16 @@
           </button>
         </form>
         <form method="GET" action="/ressources/scripts/webcam.php" target="_blank">
+          <div style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ; line-height:0px ; color:white">
+            <p>Pour lancer la webcam, ouvrez votre terminal, dans le dossier du projet tapez :</p>
+            <code class="lang-bash" style="">
+              /venv/bin/python3 /flask-video-stream-master/Detection.py
+            </code>
+            <p>Pour arrêter la webcam, ouvrez votre terminal, dans le dossier du projet tapez :</p>
+            <code class="lang-bash">
+              sudo /venv/bin/python3 /flask-video-stream-master/Kill_process.py
+            </code>
+          </div>
           <button type="submit" class="btn btn-4 btn-sep icon-metrics">
             Webcam
           </button>
