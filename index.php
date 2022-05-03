@@ -32,12 +32,12 @@
         </li>
         <li>
           <a href="/ressources/html/interface.php"
-            ><i class="fas fa-share-alt"></i> Inference</a
+            ><i class="fas fa-photo-video"></i> Inference</a
           >
         </li>
         <li>
           <a href="/ressources/onnx/index_onnx.php"
-            ><i class="fas fa-share-alt"></i> ONNX</a
+            ><i class="	fas fa-pen-alt"></i> ONNX</a
           >
         </li>
         <li>

@@ -8,11 +8,7 @@
     <link
       type="text/css"
       rel="stylesheet"
-      href="/ressources/css/index.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="/ressources/css/training.css"
     />
     <script src="https://kit.fontawesome.com/0c87a70838.js"></script>
   </head>
@@ -32,12 +28,12 @@
         </li>
         <li>
           <a href="/ressources/html/interface.php"
-            ><i class="fas fa-share-alt"></i> Inference</a
+            ><i class="fas fa-photo-video"></i> Inference</a
           >
         </li>
         <li>
           <a href="/ressources/onnx/index_onnx.php"
-            ><i class="fas fa-share-alt"></i> ONNX</a
+            ><i class="	fas fa-pen-alt"></i> ONNX</a
           >
         </li>
         <li>

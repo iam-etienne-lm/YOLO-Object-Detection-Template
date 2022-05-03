@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AWS Project | Big Data</title>
     <link rel="icon" href="img/logo.png" type="image/png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
     <script src="https://kit.fontawesome.com/0c87a70838.js"></script>
     <style type="text/css">
       body {
@@ -937,8 +933,8 @@ html{
   -webkit-box-sizing:inherit;
           box-sizing:inherit; }
 
-body{
-  font-family:-apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", "Icons16", sans-serif; }
+/* body{
+  font-family:-apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", "Icons16", sans-serif; } */
 
 p{
   margin-bottom:10px;
@@ -10318,7 +10314,7 @@ html {
 
 body {
   color: unset;
-  font-family: var(--jp-ui-font-family);
+  /* font-family: var(--jp-ui-font-family); */
 }
 
 p {
@@ -10700,7 +10696,7 @@ select {
   width: 100px;
   display: block;
   font-size: var(--jp-ui-font-size2);
-  font-family: var(--jp-ui-font-family);
+  /* font-family: var(--jp-ui-font-family); */
   font-weight: lighter;
 }
 
@@ -11964,7 +11960,7 @@ span.CodeMirror-selectedtext { background: none; }
 .CodeMirror {
   line-height: var(--jp-code-line-height);
   font-size: var(--jp-code-font-size);
-  font-family: var(--jp-code-font-family);
+  /* font-family: var(--jp-code-font-family); */
   border: 0;
   border-radius: 0;
   height: auto;
@@ -12202,7 +12198,7 @@ span.CodeMirror-selectedtext { background: none; }
   left: -2px;
   font-size: 0.95em;
   background-color: rgb(250, 129, 0);
-  font-family: var(--jp-ui-font-family);
+  /* font-family: var(--jp-ui-font-family); */
   font-weight: bold;
   line-height: normal;
   user-select: none;
@@ -12243,7 +12239,7 @@ span.CodeMirror-selectedtext { background: none; }
   text-align: left;
   padding-left: var(--jp-code-padding);
   line-height: var(--jp-code-line-height);
-  font-family: var(--jp-code-font-family);
+  /* font-family: var(--jp-code-font-family); */
 }
 
 .jp-RenderedText pre,
@@ -12428,7 +12424,7 @@ span.CodeMirror-selectedtext { background: none; }
 
 .jp-RenderedHTMLCommon {
   color: var(--jp-content-font-color1);
-  font-family: var(--jp-content-font-family);
+  /* font-family: var(--jp-content-font-family); */
   font-size: var(--jp-content-font-size1);
   line-height: var(--jp-content-line-height);
   /* Give a bit more R padding on Markdown text to keep line lengths reasonable */
@@ -12586,7 +12582,7 @@ span.CodeMirror-selectedtext { background: none; }
   border: 0;
   background-color: var(--jp-layout-color0);
   color: var(--jp-content-font-color1);
-  font-family: var(--jp-code-font-family);
+  /* font-family: var(--jp-code-font-family); */
   font-size: inherit;
   line-height: var(--jp-code-line-height);
   padding: 0;
@@ -13162,7 +13158,7 @@ body[data-format='mobile'] .jp-OutputArea-child {
 .jp-OutputPrompt {
   flex: 0 0 var(--jp-cell-prompt-width);
   color: var(--jp-cell-outprompt-font-color);
-  font-family: var(--jp-cell-prompt-font-family);
+  /* font-family: var(--jp-cell-prompt-font-family); */
   padding: var(--jp-code-padding);
   letter-spacing: var(--jp-cell-prompt-letter-spacing);
   line-height: var(--jp-code-line-height);
@@ -13326,7 +13322,7 @@ body.lm-mod-override-cursor .jp-OutputArea-output.jp-mod-isolated:before {
 }
 
 .jp-Stdin-input {
-  font-family: var(--jp-code-font-family);
+  /* font-family: var(--jp-code-font-family); */
   font-size: inherit;
   color: inherit;
   background-color: inherit;
@@ -13443,7 +13439,7 @@ body[data-format='mobile'] .jp-InputArea-editor {
 .jp-InputPrompt {
   flex: 0 0 var(--jp-cell-prompt-width);
   color: var(--jp-cell-inprompt-font-color);
-  font-family: var(--jp-cell-prompt-font-family);
+  /* font-family: var(--jp-cell-prompt-font-family); */
   padding: var(--jp-code-padding);
   letter-spacing: var(--jp-cell-prompt-letter-spacing);
   opacity: var(--jp-cell-prompt-opacity);
@@ -13854,7 +13850,7 @@ body[data-format='mobile'] .jp-InputPrompt {
   flex: 1 1 auto;
   z-index: 2;
   font-size: var(--jp-code-font-size);
-  font-family: var(--jp-code-font-family);
+  /* font-family: var(--jp-code-font-family); */
   line-height: var(--jp-code-line-height);
   padding: var(--jp-code-padding);
   border: var(--jp-border-width) solid var(--jp-cell-editor-border-color);
@@ -13870,7 +13866,7 @@ body[data-format='mobile'] .jp-InputPrompt {
   color: var(--jp-cell-inprompt-font-color);
   padding: var(--jp-code-padding);
   padding-left: 12px;
-  font-family: var(--jp-cell-prompt-font-family);
+  /* font-family: var(--jp-cell-prompt-font-family); */
   letter-spacing: var(--jp-cell-prompt-letter-spacing);
   line-height: 1.9;
   font-size: var(--jp-code-font-size);
@@ -14241,7 +14237,7 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-code-line-height: 1.3077; /* 17px for 13px base */
   --jp-code-padding: 5px; /* 5px for 13px base, codemirror highlighting needs integer px value */
   --jp-code-font-family-default: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-  --jp-code-font-family: var(--jp-code-font-family-default);
+  /* --jp-code-font-family: var(--jp-code-font-family-default); */
 
   /* This gives a magnification of about 125% in presentation mode over normal. */
   --jp-code-presentation-font-size: 16px;
@@ -14325,7 +14321,7 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-cell-editor-active-border-color: var(--jp-brand-color1);
 
   --jp-cell-prompt-width: 64px;
-  --jp-cell-prompt-font-family: var(--jp-code-font-family-default);
+  /* --jp-cell-prompt-font-family: var(--jp-code-font-family-default); */
   --jp-cell-prompt-letter-spacing: 0px;
   --jp-cell-prompt-opacity: 1;
   --jp-cell-prompt-not-active-opacity: 0.5;

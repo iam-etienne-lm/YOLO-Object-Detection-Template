@@ -2,7 +2,7 @@ from flask import Flask, Response, render_template
 import logging, logging.config, conf
 logging.config.dictConfig(conf.dictConfig)
 logger = logging.getLogger(__name__)
-import cv2,os
+import cv2
 
 import torch
 import numpy as np

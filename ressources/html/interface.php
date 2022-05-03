@@ -29,12 +29,12 @@
         </li>
         <li>
           <a href="/ressources/html/interface.php"
-            ><i class="fas fa-share-alt"></i> Inference</a
+            ><i class="fas fa-photo-video"></i> Inference</a
           >
         </li>
         <li>
           <a href="/ressources/onnx/index_onnx.php"
-            ><i class="fas fa-share-alt"></i> ONNX</a
+            ><i class="	fas fa-pen-alt"></i> ONNX</a
           >
         </li>
         <li>
@@ -104,21 +104,30 @@
 
       <div class="form-cols">
         <form method="GET" action="/ressources/scripts/inference.php">
-          <div style="white-space: pre;">
+          <div style="
+                      display: flex;
+                      justify-content: flex-start;
+                      flex-direction: column;
+                      align-items: center;">
             <label
               for="conf_threshold"
               style="
                 color: white;
-                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-                  'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-family: 'Lato';
                 margin: 15px;
               "
               >Choose a confidence threshold</label>
-            <input id="conf_threshold" name="conf_threshold" type="number" step="0.05" max="1" min="0" value="0.4"/>
+            <input class="range" type="range" id="conf_threshold" name="conf_threshold" value="0.25" min="0" max="1" step="0.05" oninput="this.nextElementSibling.value = this.value"></input>
+            <output style="color:white; font-family: 'Lato';">0.25</output>
           </div>
-            <button type="submit" class="btn btn-1 btn-sep icon-network">
-              Inference
-            </button>
+          <script type="text/javascript">
+              function rangeSlide(value) {
+                  document.getElementById('rangeValue').innerHTML = value;
+              }
+          </script>
+          <button type="submit" class="btn btn-1 btn-sep icon-network">
+            Inference
+          </button>
         </form>
         <form method="GET" action="/ressources/scripts/metrics.php" target="_blank">
           <button type="submit" class="btn btn-2 btn-sep icon-metrics">

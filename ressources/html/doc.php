@@ -23,22 +23,22 @@
       <ul>
         <li>
           <a class="active" href="/index.php"
-            ><i class="fa fa-fw fa-home"></i>Home</a
+            ><i class="fa fa-fw fa-home"></i> Home</a
           >
         </li>
         <li>
-          <a href="/ressources/html/training.php">
-            <i class="fas fa-share-alt"></i>Training</a
+          <a href="/ressources/html/training.php"
+            ><i class="fas fa-share-alt"></i> Training</a
           >
         </li>
         <li>
           <a href="/ressources/html/interface.php"
-            ><i class="fas fa-share-alt"></i> Inference</a
+            ><i class="fas fa-photo-video"></i> Inference</a
           >
         </li>
         <li>
           <a href="/ressources/onnx/index_onnx.php"
-            ><i class="fas fa-share-alt"></i> ONNX</a
+            ><i class="	fas fa-pen-alt"></i> ONNX</a
           >
         </li>
         <li>
