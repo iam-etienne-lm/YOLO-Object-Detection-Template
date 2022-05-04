@@ -2,71 +2,59 @@ from dash import dcc, html, Input, Output, callback
 
 layout = html.Div([
     html.H3('Page interface'),
+
+    dbc.col(
+        dbc.Button("Upload .pt file", color="primary", id="button-upload-file"),
+        #            enctype="multipart/form-data"
+        #    action="../scripts/upload_pt.php"
+        #    method="POST"
+        #    enctype="multipart/form-data"
+
+        # choose userfile
+        dbc.Label("Email", html_for="example-email"),
+        dbc.Input(type="email", id="example-email", placeholder="Enter email"),
+        dbc.FormText(
+            "Are you on email? You simply have to be these days",
+            color="secondary",
+        ),
+
+        dbc.Button("Submit", color="primary", id="button-submit"),
+
+        # upload file
+        dbc.Button("Upload", color="primary", id="button-upload-folder"),
+
+
+        # upload label
+        dbc.Button("Upload", color="primary", id="button-upload-label"),
+
+        # inference
+        dbc.Button("Inference", color="primary", id="button-inference"),
+
+        # show metrics
+        dbc.Button("Metrics", color="primary", id="button-metrics"),
+
+        dcc.markdown('''
+        ### Pour lancer la webcam, ouvrez votre terminal, dans le dossier du projet tapez :
+        `/venv/bin/python3 /flask-video-stream-master/Detection.py`
+
+        ### Pour arrêter la webcam, ouvrez votre terminal, dans le dossier du projet tapez :
+        `sudo /venv/bin/python3 /flask-video-stream-master/Kill_process.py`
+        ''')
+
+        # Inference
+        #echo "<h2 style='color:white'> Inferences </h2>";
+        #foreach (glob("../../uploads/Testset/Images_predites/*.jpeg") as $filename)  {
+        #    echo "</br>";
+        #    echo "<img src='$filename' alt='$filename' style='width:800px ; height:auto'/>";
+        #}
+
+        #<img src="" width="100%">
+        
+    )
  
 
 """
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AWS Project | Big Data</title>
-    <link rel="icon" href="../logo.png" type="image/png" />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="/ressources/css/interface.css"
-    />
-    
-    <script src="https://kit.fontawesome.com/0c87a70838.js"></script>
-  </head>
 
-  <body>
-    <div class="navbar">
-      <ul>
-        <li>
-          <a class="active" href="/index.php"
-            ><i class="fa fa-fw fa-home"></i> Home</a
-          >
-        </li>
-        <li>
-          <a href="/ressources/html/training.php"
-            ><i class="fas fa-share-alt"></i> Training</a
-          >
-        </li>
-        <li>
-          <a href="/ressources/html/interface.php"
-            ><i class="fas fa-photo-video"></i> Inference</a
-          >
-        </li>
-        <li>
-          <a href="/ressources/onnx/index_onnx.php"
-            ><i class="	fas fa-pen-alt"></i> ONNX</a
-          >
-        </li>
-        <li>
-          <a href="/ressources/html/doc.php"
-            ><i class="fas fa-book"></i> Documentation</a
-          >
-        </li>
-      </ul>
-    </div>
-
-    <div class="content">
-      <div class="form-cols form-cols-bis" style="align-items: center;">
-        <div class="separation">
-          <div class="middle-text">Upload .pt file</div>
-          <form
-            enctype="multipart/form-data"
-            action="../scripts/upload_pt.php"
-            method="POST"
-          >
-            <input class="choose" name="userfile" type="file" />
-            <div class="wrap">
-              <button class="button" type="submit">Upload</button>
-            </div>
-          </form>
-        </div>
         <div class="separation">
           <div class="middle-text">Upload images (multiple)</div>
           <form
@@ -84,6 +72,10 @@ layout = html.Div([
             />
             <div class="wrap">
               <button class="button" name="sub" type="submit">Upload</button>
+
+
+
+
             </div>
           </form>
           </br>
@@ -136,11 +128,15 @@ layout = html.Div([
             Inference
           </button>
         </form>
+
+
         <form method="GET" action="/ressources/scripts/metrics.php" target="_blank">
           <button type="submit" class="btn btn-2 btn-sep icon-metrics">
             Show Metrics
           </button>
         </form>
+
+
         <form method="GET" action="/ressources/scripts/webcam.php" target="_blank">
           <div style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ; line-height:0px ; color:white">
             <p>Pour lancer la webcam, ouvrez votre terminal, dans le dossier du projet tapez :</p>
@@ -152,15 +148,20 @@ layout = html.Div([
               sudo /venv/bin/python3 /flask-video-stream-master/Kill_process.py
             </code>
           </div>
+
           <button type="submit" class="btn btn-4 btn-sep icon-metrics">
             Webcam
           </button>
         </form>
+
+
         <form method="GET" action="/ressources/scripts/clear_cache.php">
           <button type="submit" class="btn btn-3 btn-sep icon-clear">
             Clear Cache
           </button>
         </form>
+
+
       </div>
       <div>
       <?php
