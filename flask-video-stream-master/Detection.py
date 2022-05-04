@@ -1,7 +1,4 @@
 from flask import Flask, Response, render_template
-import logging, logging.config, conf
-logging.config.dictConfig(conf.dictConfig)
-logger = logging.getLogger(__name__)
 import cv2
 
 import torch
@@ -88,54 +85,17 @@ class Detection:
 
         return frame
 
-    def __call__(self):
-        """
-        This function is called when class is executed, it runs the loop to read the video frame by frame,
-        and write the output into a new file.
-        :return: void
-        """
-        cap = self.get_video_capture()
-        assert cap.isOpened()
-      
-        while True:
-          
-            ret, frame = cap.read()
-            assert ret
-            
-            frame = cv2.resize(frame, (416,416))
-            
-            start_time = time()
-            results = self.score_frame(frame)
-            frame = self.plot_boxes(results, frame)
-            
-            end_time = time()
-            fps = 1/np.round(end_time - start_time, 2)
-            #print(f"Frames Per Second : {fps}")
-             
-            cv2.putText(frame, f'FPS: {int(fps)}', (20,70), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0,255,0), 2)
-            
-            cv2.imshow('YOLOv5 Detection', frame)
- 
-            if cv2.waitKey(5) & 0xFF == 27:
-                break
-      
-        cap.release()
-
-app = Flask(__name__)
-video = cv2.VideoCapture(0)
-
-@app.route('/')
-def index():
-    return "Default Message"
-
-def gen(video):
+def gen():
     # Par défaut, le script python nous situe au chemin /var/www/html
     detector = Detection(capture_index=0, model_name='./uploads/weights.pt')
+    video = detector.get_video_capture()
+    width  = video.get(cv2.CAP_PROP_FRAME_WIDTH)   # float `width`
+    height = video.get(cv2.CAP_PROP_FRAME_HEIGHT)  # float `height`
     while True:
         success, image = video.read()
         assert success
         
-        frame = cv2.resize(image, (416,416))
+        frame = cv2.resize(image, (int(width),int(height)))
         
         start_time = time()
         results = detector.score_frame(frame)
@@ -143,7 +103,6 @@ def gen(video):
         
         end_time = time()
         fps = 1/np.round(end_time - start_time, 2)
-        #print(f"Frames Per Second : {fps}")
             
         cv2.putText(frame, f'FPS: {int(fps)}', (20,70), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0,255,0), 2)
         
@@ -154,15 +113,19 @@ def gen(video):
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return "Default Message"
+
 @app.route('/video_feed')
 def video_feed():
-    global video
-    return Response(gen(video),
+    return Response(gen(),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
     
 @app.route("/stream")
 def stream_page():
-	logger.debug("Requested stream page")
 	return render_template("live_streaming.php")
 
 if __name__ == '__main__':
