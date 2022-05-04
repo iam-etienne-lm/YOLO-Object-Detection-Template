@@ -1,0 +1,9 @@
+### ENV ###
+.env
+
+### IDE ###
+.idea
+.vscode
+
+### CLUUTER ###
+__pycache__
