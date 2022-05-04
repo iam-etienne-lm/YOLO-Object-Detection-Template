@@ -4,6 +4,7 @@ __pycache__
 Inference/modules/__pycache__
 venv/
 database.db
+condaenv.*
 
 ### .gitignore A01
 ### ENV ###

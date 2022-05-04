@@ -5,39 +5,8 @@ layout = html.Div([
 
 """
 
-    <script src="script_onnx.js" type="module"></script>
-  </head>
-  <body>
-    <div class="navbar">
-      <ul>
-        <li>
-          <a class="active" href="/index.php"
-            ><i class="fa fa-fw fa-home"></i> Home</a
-          >
-        </li>
-        <li>
-          <a href="/ressources/html/training.php"
-            ><i class="fas fa-share-alt"></i> Training</a
-          >
-        </li>
-        <li>
-          <a href="/ressources/html/interface.php"
-            ><i class="fas fa-photo-video"></i> Inference</a
-          >
-        </li>
-        <li>
-          <a href="/ressources/onnx/index_onnx.php"
-            ><i class="	fas fa-pen-alt"></i> ONNX</a
-          >
-        </li>
-        <li>
-          <a href="/ressources/html/doc.php"
-            ><i class="fas fa-book"></i> Documentation</a
-          >
-        </li>
-      </ul>
-    </div>
-
+    # <script src="script_onnx.js" type="module"></script>
+  <
     <div class="drawing_zone">
       <canvas
         class="canvas elevation"

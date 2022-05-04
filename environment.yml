@@ -1,4 +1,4 @@
-name: spaguetti
+name: spaghetti
 dependencies:
   - python=3.8
   - pip
