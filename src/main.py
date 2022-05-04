@@ -12,7 +12,6 @@ import dash_bootstrap_components as dbc
 # internal modules
 import config
 from components import navbar
-from views import page1, page2
 from views import index, doc, interface, onnx, training_notebook
 
 
@@ -48,10 +47,7 @@ def display_page(pathname):
         return onnx.layout
     elif pathname == '/training_notebook':
         return training_notebook.layout
-    if pathname == '/page1':
-        return page1.layout
-    elif pathname == '/page2':
-        return page2.layout
+
     else:
         return '404'
 

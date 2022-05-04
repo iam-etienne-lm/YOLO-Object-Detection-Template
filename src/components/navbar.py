@@ -103,9 +103,21 @@ layout = dbc.Nav(
                 className='btn btn-primary',
                 hidden=False
             ),
-        dcc.Location(id="training_notebook", refresh=True)
+        dcc.Location(id="training_notebook", refresh=True),
+
+
+        # Top
+        
+            
+        html.Div([
+        html.Br(),
+            html.H1(config.name, id="nav-pills"),
+
+        ])
     ],
 )
+
+
 
 
 # Python functions for about navitem-popover
